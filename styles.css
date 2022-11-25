@@ -1,0 +1,86 @@
+body {
+  display: grid;
+  grid-template-columns: 4fr 14fr;
+
+  text-align: justify;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.1em;
+}
+
+nav,
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 10px;
+  padding: 10px;
+}
+
+main {
+  margin-left: 20px;
+}
+
+#navbar {
+  background-color: rgb(240, 248, 255);
+  max-height: 900px;
+  min-width: 175px;
+  position: sticky;
+  top: 15px;
+  border-right: solid black 1px;
+}
+
+h1 {
+  text-align: start;
+  color: rgb(0, 0, 0);
+}
+
+h2,
+h3,
+h4,
+h5 {
+  color: rgb(130, 137, 236);
+}
+
+h2 {
+  color: rgb(132, 81, 214);
+}
+
+nav {
+  font-size: 1.1em;
+}
+
+nav > a {
+  color: rgb(130, 137, 236);
+  margin-bottom: 15px;
+  text-decoration: none;
+  border-bottom: solid black 1px;
+}
+
+#img-section {
+  display: flex;
+  flex-direction: row;
+}
+
+figure {
+  margin: auto;
+  font-style: italic;
+  text-align: center;
+  color: rgb(10, 188, 201);
+}
+
+img {
+  width: 100%;
+  max-height: 540px;
+  max-width: 640px;
+}
+
+@media only screen and (max-width: 700px), (max-height: 850px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  #navbar {
+    position: static;
+    min-width: 100px;
+  }
+}

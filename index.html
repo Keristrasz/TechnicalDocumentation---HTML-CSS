@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1>
+          Provedení profilových průzkumů automobilové dopravy v obci
+          Brno-Bohunice
+        </h1>
+      </header>
+      <a class="nav-link" href="#1._Úvod">1. Úvod</a>
+      <a class="nav-link" href="#2._Zpracovaná_data">2. Zpracovaná data</a>
+      <a class="nav-link" href="#2.1._Agregovaná_data_po_dnech"
+        >2.1. Agregovaná data po dnech</a
+      >
+      <a class="nav-link" href="#2.2._Týdenní_agregace"
+        >2.2. Týdenní agregace</a
+      >
+      <a class="nav-link" href="#2.3._Charakteristiky_intenzit_dopravy"
+        >2.3. Charakteristiky intenzit dopravy</a
+      >
+      <a class="nav-link" href="#2.3.1._Profil_Lány_39_-_Západ_-_směr_Lískovec"
+        >2.3.1. Profil Lány 39 - Západ - směr Lískovec</a
+      >
+      <a class="nav-link" href="#2.3.2._Profil_Lány_39_-_Západ_-_směr_Centrum"
+        >2.3.2. Profil Lány 39 - Západ - směr Centrum</a
+      >
+      <a class="nav-link" href="#2.3.3._Profil_Lány_46_-_Východ_-_směr_Lískovec"
+        >2.3.3. Profil Lány 46 - Východ - směr Lískovec</a
+      >
+      <a class="nav-link" href="#2.3.4._Profil_Lány_46_-_Východ_-_směr_Centrum"
+        >2.3.4. Profil Lány 46 - Východ - směr Centrum</a
+      >
+      <a class="nav-link" href="#3._Závěr">3. Závěr</a>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="1._Úvod">
+        <header>
+          <h2>1. Úvod</h2>
+        </header>
+        <p>
+          Předmětem zakázky je profilový průzkum automobilové dopravy na
+          následujících profilech:
+        </p>
+        <ul>
+          <li>
+            Místní komunikace v obci Brno-Bohunice v profilu ulice Lány 39 (Lány
+            Západ)
+          </li>
+          <li>
+            Místní komunikace v obci Brno-Bohunice v profilu ulice Lány 46 (Lány
+            Východ)
+          </li>
+        </ul>
+        <p>
+          Měřící přístroje byly osazeny neinvazivním způsobem na svislé dopravní
+          značení v nejvhodnějším možném místě k těmto lokalitám. Přesné GPS
+          osazení jsou následující: pro Lány 46 (Lány východ):
+          <a
+            href="https://mapy.cz/letecka?vlastni-body&x=16.5926553&y=49.1641224&z=20&ut=Nov%C3%BD%20bod&uc=9mJfqxTj44&ud=Bohunick%C3%A1%2C%20Brno%2C%20Brno-m%C4%9Bsto"
+            target="_blank"
+            >49.1642542N, 16.5927725E</a
+          >
+          a
+          <a
+            href="https://mapy.cz/letecka?vlastni-body&ut=Nov%C3%BD%20bod&uc=9mJi1xTjEy&ud=Bohunick%C3%A1%2C%20Brno%2C%20Brno-m%C4%9Bsto&x=16.5929517&y=49.1640606&z=19"
+            target="_blank"
+            >49.1641167N, 16.5930892E</a
+          >
+          a pro Lány 39 (Lány západ):
+          <a
+            href="https://www.google.com/maps/place/49%C2%B009'57.4%22N+16%C2%B034'45.8%22E/@49.1659471,16.5771999,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xde759d6556ee26ab!8m2!3d49.1659436!4d16.5793886"
+            target="_blank"
+            >49.1659436N, 16.5793886E</a
+          >
+          a E
+          <a
+            href="https://www.google.com/maps/place/49%C2%B009'57.1%22N+16%C2%B034'45.5%22E/@49.1659471,16.5771999,17z/data=!4m5!3m4!1s0x0:0x775a0a6f837f4cfd!8m2!3d49.1658508!4d16.5792925"
+            target="_blank"
+            >49.1658508N, 16.5792925</a
+          >
+          (odkazy jsou hypertextové). Průzkum byl realizován pomocí
+          <b> automatických sčítačů dopravy (ASD)</b> Sierzega SR4 a probíhal 1
+          týden, začátek měření proběhlo od 4. 4. do 10. 4. 2022 (pondělí -
+          neděle).
+        </p>
+
+        <p>
+          Automatické sčítače dopravy byly osazeny na sloupky dopravního značení
+          v pátek 1.4.2022 a demontovány v pondělí 11.4.2022, tak aby byla
+          dosažena celistvost dat celého týdne 4.4. - 10.4. Byl osazen vždy
+          jeden ASD pro každý směr jízdy, celkově tedy byly osazeny 4 ASD pro
+          dva profily na ulici Lány. Při osazení ASD vždy došlo k nastavení a
+          kalibraci přístroje, to slouží především ke správnému rozlišování
+          kategorií vozidel.
+        </p>
+
+        <p>Příklad umístění ASD pro Lány 39 a 46 (s otevřenou skříňkou ASD):</p>
+        <div id="img-section">
+          <figure>
+            <img src="./Img1.jpg" alt="situace-ASD-západ" />
+            <figcaption>
+              Obrázek 1: Umístění ASD pro Lány 39 (západ), směr Lískovec
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="./Img2.jpg" alt="situace-ASD-východ" />
+            <figcaption>
+              Obrázek 2: Umístění ASD pro Lány 46 (východ), směr Centrum
+            </figcaption>
+          </figure>
+        </div>
+
+        <p>
+          Pro dopravní průzkum byly použity automatické sčítače dopravy Sierzega
+          SR4, které měří dopravu s následující přesností:
+        </p>
+        <ul>
+          <li>rychlost ± 3 %,</li>
+          <li>délka vozidla ± 20 %,</li>
+          <li>bezpečnostní odstup ± 0,2 s.</li>
+        </ul>
+        <p>
+          Požadované rozlišení kategorií jsou: osobní vozidla, autobusy,
+          nákladní vozidla nad 3,5 t a nákladní soupravy. Rozlišení kategorií
+          vozidel probíhá podle naměřených délek vozidel. Do osobních vozidel
+          jsou zahrnovány i kategorie motocyklů a lehkých nákladních vozidel do
+          3,5 t (to jsou většinou dodávky). Do nákladních souprav jsou
+          zahrnovány i nákladní vozidla s přívěsem.
+        </p>
+      </section>
+      <section class="main-section" id="2._Zpracovaná_data">
+        <header><h2>2. Zpracovaná data</h2></header>
+
+        <p>
+          Z důvodu velkého rozsahu tabulek budou v této zprávě uvedena pouze
+          agregovaná data po celých dnech a týdnu, agregace po hodinách je
+          přiložena v příloze tohoto dokumentu v editovatelném souboru excel.
+          Pokud není uvedena příslušná jednotka k číslu jedná se o voz/h -
+          vozidla za hodinu.
+        </p>
+      </section>
+      <section class="main-section" id="2.1._Agregovaná_data_po_dnech">
+        <header><h3>2.1. Agregovaná data po dnech</h3></header>
+
+        <figure>
+          <figcaption>
+            Tabulka 1: Profil Lány 39 - Západ - směr Lískovec
+          </figcaption>
+          <img src="./images/tab1.PNG" alt="den tabulka dat1" />
+        </figure>
+        <figure>
+          <figcaption>
+            Tabulka 2: Profil Lány 39 - Západ - směr Centrum
+          </figcaption>
+          <img src="./images/tab2.PNG" alt="den tabulka dat2" />
+        </figure>
+        <figure>
+          <figcaption>
+            Tabulka 3: Profil Lány 46 - Východ - směr Lískovec
+          </figcaption>
+          <img src="./images/tab3.PNG" alt="den tabulka dat3" />
+        </figure>
+        <figure>
+          <figcaption>
+            Tabulka 4: Profil Lány 46 - Východ - směr Centrum
+          </figcaption>
+          <img src="./images/tab4.PNG" alt="den tabulka dat4" />
+        </figure>
+      </section>
+      <section class="main-section" id="2.2._Týdenní_agregace">
+        <header><h3>2.2. Týdenní agregace</h3></header>
+        <figure>
+          <figcaption>
+            Tabulka 5: Profil Lány 39 - Západ - směr Lískovec
+          </figcaption>
+          <img src="./images/5.png" alt="týden tabulka dat1" />
+        </figure>
+        <figure>
+          <figcaption>
+            Tabulka 6: Profil Lány 39 - Západ - směr Centrum
+          </figcaption>
+          <img src="./images/6.PNG" alt="týden tabulka dat2" />
+        </figure>
+        <figure>
+          <figcaption>
+            Tabulka 7: Profil Lány 46 - Východ - směr Lískovec
+          </figcaption>
+          <img src="./images/7.PNG" alt="týden tabulka dat3" />
+        </figure>
+        <figure>
+          <figcaption>
+            Tabulka 8: Profil Lány 46 - Východ - směr Centrum
+          </figcaption>
+          <img src="./images/8.PNG" alt="týden tabulka dat4" />
+        </figure>
+      </section>
+      <section class="main-section" id="2.3._Charakteristiky_intenzit_dopravy">
+        <header><h3>2.3. Charakteristiky intenzit dopravy</h3></header>
+        <p>
+          V této kapitole budou uvedeny hodnoty základních charakteristik
+          intenzit dopravy.
+        </p>
+      </section>
+      <section
+        class="main-section"
+        id="2.3.1._Profil_Lány_39_-_Západ_-_směr_Lískovec"
+      >
+        <header><h4>2.3.1. Profil Lány 39 - Západ - směr Lískovec</h4></header>
+        <p>
+          Intenzita špičkové hodiny: IŠH = 598 voz/h (středa 6.4. 15:00 - 16:00)
+        </p>
+        <p>Roční průměr denních intenzit: RPDI = 4071 voz/den</p>
+        <p>
+          Roční průměr denních intenzit v pracovní dny: RPDIPD = 4697 voz/den
+        </p>
+      </section>
+      <section
+        class="main-section"
+        id="2.3.2._Profil_Lány_39_-_Západ_-_směr_Centrum"
+      >
+        <header><h4>2.3.2. Profil Lány 39 - Západ - směr Centrum</h4></header>
+        <p>
+          Intenzita špičkové hodiny: IŠH = 852 voz/h (pondělí 4.4. 7:00 - 8:00)
+        </p>
+        <p>Roční průměr denních intenzit: RPDI = 5079 voz/den</p>
+        <p>
+          Roční průměr denních intenzit v pracovní dny: RPDIPD = 5884 voz/den
+        </p>
+      </section>
+      <section
+        class="main-section"
+        id="2.3.3._Profil_Lány_46_-_Východ_-_směr_Lískovec"
+      >
+        <header><h4>2.3.3. Profil Lány 46 - Východ - směr Lískovec</h4></header>
+        <p>
+          Intenzita špičkové hodiny: IŠH = 942 voz/h (pondělí 4.4. 16:00 -
+          17:00)
+        </p>
+        <p>Roční průměr denních intenzit: RPDI = 6417 voz/den</p>
+        <p>
+          Roční průměr denních intenzit v pracovní dny: RPDIPD = 7548 voz/den
+        </p>
+      </section>
+      <section
+        class="main-section"
+        id="2.3.4._Profil_Lány_46_-_Východ_-_směr_Centrum"
+      >
+        <header><h4>2.3.4. Profil Lány 46 - Východ - směr Centrum</h4></header>
+        <p>
+          Intenzita špičkové hodiny: IŠH = 999 voz/h (středa 6.4. 7:00 - 8:00)
+        </p>
+        <p>Roční průměr denních intenzit: RPDI = 6870 voz/den</p>
+        <p>
+          Roční průměr denních intenzit v pracovní dny: RPDIPD = 8154 voz/den
+        </p>
+      </section>
+      <section class="main-section" id="3._Závěr">
+        <header><h2>3. Závěr</h2></header>
+        <p>
+          Na základě objednávky průzkumu automobilové dopravy proběhl mezi dny
+          4. 4. 2022 a 10. 4. 2022 dopravní průzkum na profilech v ulici Lány v
+          obci Brno-Bohunice. Tento dopravní průzkum byl zajištěn pomocí
+          automatických sčítačů dopravy Sierzega SR4. Základní data jsou
+          obsažená v této zprávě, podrobnější členění v hodinových je uvedeno v
+          příloze této zprávy.
+        </p>
+        <p>
+          Profilem Lány 39 - Západ projelo za zaznamenaný týden dohromady 66 805
+          voz/h v obou směrech.
+        </p>
+        <p>
+          Profilem Lány 46 - Východ projelo za zaznamenaný týden dohromady 97
+          022 voz/h v obou směrech.
+        </p>
+        <p>
+          Profilem Lány 39 - Západ - směr Lískovec projelo zaznamenaný týden
+          pondělí - neděle: 29 729 vozidel. Poměrově 97,6 % osobních vozidel (s
+          motocykly a dodávkami), 1,4 % autobusů, 0,7 % nákladních vozidel nad
+          3,5 t a 0,3 % nákladních souprav (s nákladními vozidly s přívěsem).
+          Špičková hodina nastala ve středu 6.4. v 15:00 - 16:00 s hodnotou 598
+          voz/h.
+        </p>
+        <p>
+          Profilem Lány 39 - Západ - směr Centrum projelo zaznamenaný týden
+          pondělí - neděle: 37 076 vozidel. Poměrově 97,8 % osobních vozidel (s
+          motocykly a dodávkami), 1,2 % autobusů, 0,8 % nákladních vozidel nad
+          3,5 t a 0,2 % nákladních souprav (s nákladními vozidly s přívěsem).
+          Špičková hodina nastala v pondělí 4.4. v 7:00 - 8:00 s hodnotou 852
+          voz/h.
+        </p>
+
+        <p>
+          Profilem Lány 46 - Východ - směr Lískovec projelo zaznamenaný týden
+          pondělí - neděle: 46 856 vozidel. Poměrově 97,8 % osobních vozidel (s
+          motocykly a dodávkami), 1,3 % autobusů, 0,7 % nákladních vozidel nad
+          3,5 t a 0,2 % nákladních souprav (s nákladními vozidly s přívěsem).
+          Špičková hodina nastala v pondělí 4.4. v 16:00 - 17:00 s hodnotou 942
+          voz/h.
+        </p>
+        <p>
+          Profilem Lány 46 - Východ - směr Centrum projelo zaznamenaný týden
+          pondělí - neděle: 50 166 vozidel. Poměrově 97,5 % osobních vozidel (s
+          motocykly a dodávkami), 1,3 % autobusů, 1,0 % nákladních vozidel nad
+          3,5 t a 0,2 % nákladních souprav (s nákladními vozidly s přívěsem).
+          Špičková hodina nastala ve středu 6.4. v 7:00 - 8:00 s hodnotou 999
+          voz/h.
+        </p>
+        <p>
+          Tyto dva zmíněné profily jsou sousedící profily oddělené pouze
+          především významnější křižovatkou Ukrajinská X Lány. Doprava na
+          profilu Lány 46 - Západ stoupá oproti profilu Lány 39 - Východ o téměř
+          50%, vlivem především této křižovatky.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
